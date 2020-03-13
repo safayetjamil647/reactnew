@@ -1,24 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
+import First from './First'
+import Counter from './Counter'
 import './App.css';
 
 function App() {
+  const msg="wfdsdsad";
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>{msg}</p>
+      <First name="ami"email="tumi" address="sei"/>
+      <First name="tumi"email="tami" address="job"/>
+      <Counter/>
     </div>
   );
 }
