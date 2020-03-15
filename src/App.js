@@ -1,19 +1,32 @@
-import React from 'react';
-import First from './First'
-import Counter from './Counter'
+import React, { Component } from 'react';
+import First from './First';
+// import Sec from './Sec'
+// import Counter from './Counter'
 import './App.css';
 
-function App() {
-  const msg="wfdsdsad";
-  return (
+class App extends Component{
+
+
+  state={
+    persons:[
+      {name:'hm',email:'em', address:'sw'},
+      {name:'am',email:'dm', address:'pw'},
+      {name:'lm',email:'xm', address:'we'},
+    ]
+  }
+  
+    render (){
     
-    <div className="App">
-      <p>{msg}</p>
-      <First name="ami"email="tumi" address="sei"/>
-      <First name="tumi"email="tami" address="job"/>
-      <Counter/>
-    </div>
-  );
-}
+      
+      return(
+      <div className="App">
+       
+      {this.state.persons.map(person=><First name={person.name}
+      email={person.email} address={person.address}/>)}
+      </div>
+      );
+    }
+    }
+
 
 export default App;
